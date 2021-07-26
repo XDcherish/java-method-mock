@@ -16,7 +16,17 @@ class MockApplicationTests {
     private TestMockClass mockClass;
 
     @Test
-    void contextLoads() {
+    void testSimpleInputOutput() {
+        mockClass.testSimpleInputOutput("mock");
+    }
+
+    @Test
+    void testSimpleWithoutInput() {
+          mockClass.testSimpleWithoutInput();
+    }
+
+    @Test
+    void testComplexInputOutput() {
         //  mockClass.testSimpleInputOutput("mock");
         //  mockClass.testSimpleWithoutInput();
         MockTestRequest request = new MockTestRequest();
