@@ -1,0 +1,85 @@
+{
+  "com.xh.utils.mock.test.TestMockClass#testSimpleWithoutInput": {
+    "openMock": true,
+    "mockResponseDTOS": [
+      {
+        "mockType": 1,
+        "responseContent": false
+      }
+    ]
+  },
+  "com.xh.utils.mock.test.TestMockClass#testSimpleInputOutput": {
+    "openMock": true,
+    "mockRequestDTOsList": [
+      [
+        {
+          "requestType": 1,
+          "requestCompareContent": "mock"
+        }
+      ]
+    ],
+    "mockResponseDTOS": [
+      {
+        "mockType": 1,
+        "responseContent": true
+      }
+    ]
+  },
+  "com.xh.utils.mock.test.TestMockClass#testComplexInputOutput": {
+    "openMock": true,
+    "mockRequestDTOsList": [
+      [
+        {
+          "requestType": 1,
+          "requestCompareContent": "1"
+        },
+        {
+          "requestCompareContent": {
+            "id": 1,
+            "inputDTO":{
+              "subId": 101
+            }
+          }
+        }
+      ],
+      [
+        {
+          "requestType": 1,
+          "requestCompareContent": "2"
+        },
+        {
+          "requestCompareContent": {
+            "id": 2,
+            "inputDTO": {
+              "subId": 201
+            }
+          }
+        }
+      ]
+    ],
+    "mockResponseDTOS": [
+      {
+        "responseContent": {
+          "resName": "modifyName",
+          "outputDTOS": "[{\"resSubId\":21},{\"resSubId\":22}]",
+          "outputDTO.resSubName": "修改嵌套较深的字段"
+        }
+      },
+      {
+        "mockType": 1,
+        "responseContent": {
+          "resId": 1,
+          "resName": "mockName",
+          "outputDTOS": [
+            {
+              "resSubId": 11
+            },
+            {
+              "resSubId": 12
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
