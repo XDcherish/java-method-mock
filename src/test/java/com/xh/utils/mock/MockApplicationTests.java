@@ -17,12 +17,12 @@ class MockApplicationTests {
 
     @Test
     void testSimpleInputOutput() {
-        mockClass.testSimpleInputOutput("mock");
+        System.out.println(mockClass.testSimpleInputOutput("mock"));
     }
 
     @Test
     void testSimpleWithoutInput() {
-          mockClass.testSimpleWithoutInput();
+        System.out.println(mockClass.testSimpleWithoutInput());
     }
 
     @Test
